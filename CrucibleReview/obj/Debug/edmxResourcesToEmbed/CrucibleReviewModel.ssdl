@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CrucibleReviewModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_CrucibleReviewDetails">
+    <Key>
+      <PropertyRef Name="CrucibleReviewID" />
+    </Key>
+    <Property Name="CrucibleReviewID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CrucibleID" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="JiraTicketID" Type="varchar" MaxLength="25" />
+    <Property Name="CreatedUserName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProjectKey" Type="varchar" MaxLength="25" />
+    <Property Name="ReviewDescription" Type="varchar(max)" />
+    <Property Name="ReviewersComment" Type="varchar(max)" />
+    <Property Name="IsDefectRaised" Type="varchar" MaxLength="7" />
+    <Property Name="ReviewerName" Type="varchar" MaxLength="50" />
+    <Property Name="DevelopersReplie" Type="varchar(max)" />
+    <Property Name="CrucibleCreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CrucibleClosedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="CrucibleReviewModelStoreContainer">
+    <EntitySet Name="tbl_CrucibleReviewDetails" EntityType="Self.tbl_CrucibleReviewDetails" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

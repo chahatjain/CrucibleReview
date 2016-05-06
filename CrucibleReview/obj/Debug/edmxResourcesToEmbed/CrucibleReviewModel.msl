@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CrucibleReviewModelStoreContainer" CdmEntityContainer="CrucibleReviewEntities4">
+    <EntitySetMapping Name="tbl_CrucibleReviewDetails">
+      <EntityTypeMapping TypeName="CrucibleReviewModel.tbl_CrucibleReviewDetails">
+        <MappingFragment StoreEntitySet="tbl_CrucibleReviewDetails">
+          <ScalarProperty Name="CrucibleReviewID" ColumnName="CrucibleReviewID" />
+          <ScalarProperty Name="CrucibleID" ColumnName="CrucibleID" />
+          <ScalarProperty Name="JiraTicketID" ColumnName="JiraTicketID" />
+          <ScalarProperty Name="CreatedUserName" ColumnName="CreatedUserName" />
+          <ScalarProperty Name="ProjectKey" ColumnName="ProjectKey" />
+          <ScalarProperty Name="ReviewDescription" ColumnName="ReviewDescription" />
+          <ScalarProperty Name="ReviewersComment" ColumnName="ReviewersComment" />
+          <ScalarProperty Name="IsDefectRaised" ColumnName="IsDefectRaised" />
+          <ScalarProperty Name="ReviewerName" ColumnName="ReviewerName" />
+          <ScalarProperty Name="DevelopersReplie" ColumnName="DevelopersReplie" />
+          <ScalarProperty Name="CrucibleCreatedDate" ColumnName="CrucibleCreatedDate" />
+          <ScalarProperty Name="CrucibleClosedDate" ColumnName="CrucibleClosedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

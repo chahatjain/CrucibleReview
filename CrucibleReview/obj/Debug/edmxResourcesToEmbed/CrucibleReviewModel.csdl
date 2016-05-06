@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CrucibleReviewModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbl_CrucibleReviewDetails">
+    <Key>
+      <PropertyRef Name="CrucibleReviewID" />
+    </Key>
+    <Property Name="CrucibleReviewID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CrucibleID" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="JiraTicketID" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProjectKey" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="ReviewDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ReviewersComment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IsDefectRaised" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="ReviewerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DevelopersReplie" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CrucibleCreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CrucibleClosedDate" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="CrucibleReviewEntities4" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_CrucibleReviewDetails" EntityType="Self.tbl_CrucibleReviewDetails" />
+  </EntityContainer>
+</Schema>
