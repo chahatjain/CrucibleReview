@@ -1,18 +1,52 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <title>Search Crucible Review</title>
+	<style>
+		.heading{
+			background-color : green
+		}
+	</style>
 </head>
 <body>
-    <div class="text-center"> 
-        <label for="FromDate">FromDate : </label> <input id="fromDate" type="date" value="2016-01-01" />
+	<div class="jumbotron text-center heading">
+		<h1>Search For Reviews</h1>
+	</div>
+    <div> 
+		<div class="col-sm-3">
+			<label for="FromDate">FromDate : </label> <input id="fromDate" type="date" value="2016-01-01" class="" />
+		</div>
+        <div class="col-sm-3">
         <label for="FromDate">ToDate : </label> <input id="toDate" type="date" value="2016-01-01" />
+		</div>
+		<div class="col-sm-3">
+		<label for="Name">Enter Name : </label> <input type="text" id="name" placeholder="Enter Name to Search"/>
+		</div>
+		
+		<div class="col-sm-3 radio">
+		<label for="Name">Defect Raised : </label>
+			  <label><input type="radio" name="optradio" id="defectTrue">True</label>
+			  <label><input type="radio" name="optradio" id="defectFalse">False</label>
+			<br></br>
+		</div>
+		<div></div>
+		<div>
+			<input type="submit" id="submitDate" value="ClickToSearch" class="col-sm-12 btn btn-primary" onclick="ShowReviewDetails()"/>
+		</div>
     </div>
-    <div>
-        <br />
-        <input type="submit" id="submitDate" value="SearchForReviews" />
-    </div>
+    
+	<script>
+		function ShowReviewDetails(){
+			var fromDateValue = $("#fromDate").val();
+			var toDateValue = $("#toDate").val();
+		};
+	</script>
 </body>
 </html>
